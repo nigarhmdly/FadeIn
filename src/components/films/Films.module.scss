@@ -1,0 +1,389 @@
+.Films{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: end;
+    background-color: black;
+    padding: 45px 0px;
+
+    .container{
+ width: 80%;
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+
+
+ input{
+    background-color: transparent;
+    border: none;
+    border-bottom: .1px solid rgb(112, 112, 112);
+    padding: 5px;
+    margin: 10px 0px 30px;
+    width: 50%;
+    color: white;
+ }
+.items{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: relative;
+        margin: 10px;
+        
+        
+        .buttons{
+            position: absolute;
+            display: none;
+            z-index: 1;
+            background-color: #00000074;
+            height: 100%;
+            width: 100%;
+           
+
+            button{
+                color: white;
+                background-color: transparent;
+                border: none;
+                font-size: 20px;
+                cursor: pointer;
+                &:hover{
+                    color: #E3B517;
+                }
+
+               
+            }
+        }
+        
+        .buttonss{
+            position: absolute;
+            display: none;
+            z-index: 1;
+            gap: 10px;
+           
+
+            button{
+                color: white;
+                background-color: transparent;
+                border: none;
+                font-size: 23px;
+                cursor: pointer;
+                &:hover{
+                    color: #E3B517;
+                }
+
+               
+            }
+        }
+        img{
+         
+            display: flex;
+            width: 150px;
+            height: 230px;
+            cursor: pointer;
+            border: 1px solid rgb(100, 100, 100);
+            border-radius: 5px;
+         
+        }
+        &:hover .buttons{
+            display: flex;
+                        }
+                        &:hover .buttonss{
+                            display: flex;
+                                        }
+    }
+}
+}
+}
+
+
+@media (min-width: 650px) and (max-width: 1024px) {
+    .Films{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        padding: 45px 0px;
+    
+        .container{
+     width: 90%;
+     height: 100%;
+    .items{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            position: relative;
+            margin: 10px;
+            
+            
+            .buttons{
+                position: absolute;
+                display: none;
+                z-index: 1;
+                background-color: #00000074;
+                height: 100%;
+                width: 100%;
+               
+    
+                button{
+                    color: white;
+                    background-color: transparent;
+                    border: none;
+                    font-size: 20px;
+                    cursor: pointer;
+                    &:hover{
+                        color: #E3B517;
+                    }
+    
+                   
+                }
+            }
+            
+            .buttonss{
+                position: absolute;
+                display: none;
+                z-index: 1;
+                gap: 10px;
+               
+    
+                button{
+                    color: white;
+                    background-color: transparent;
+                    border: none;
+                    font-size: 23px;
+                    cursor: pointer;
+                    &:hover{
+                        color: #E3B517;
+                    }
+    
+                   
+                }
+            }
+            img{
+             
+                display: flex;
+                width: 150px;
+                height: 230px;
+                cursor: pointer;
+                border: 1px solid rgb(100, 100, 100);
+                border-radius: 5px;
+             
+            }
+            &:hover .buttons{
+                display: flex;
+                            }
+                            &:hover .buttonss{
+                                display: flex;
+                                            }
+        }
+    }
+    }
+    }
+}
+
+
+@media (max-width: 650px) {
+    .Films{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        padding: 45px 0px;
+    
+        .container{
+     width: 100%;
+     height: 100%;
+    .items{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0px;
+            position: relative;
+            margin: 10px;
+            
+            
+            .buttons{
+                position: absolute;
+                display: none;
+                z-index: 1;
+                background-color: #00000074;
+                height: 100%;
+                width: 100%;
+               
+    
+                button{
+                    color: white;
+                    background-color: transparent;
+                    border: none;
+                    font-size: 20px;
+                    cursor: pointer;
+                    &:hover{
+                        color: #E3B517;
+                    }
+    
+                   
+                }
+            }
+            
+            .buttonss{
+                position: absolute;
+                display: none;
+                z-index: 1;
+                gap: 10px;
+               
+    
+                button{
+                    color: white;
+                    background-color: transparent;
+                    border: none;
+                    font-size: 23px;
+                    cursor: pointer;
+                    &:hover{
+                        color: #E3B517;
+                    }
+    
+                   
+                }
+            }
+            img{
+             
+                display: flex;
+                width: 110px;
+                height: 170px;
+                cursor: pointer;
+                border: 1px solid rgb(100, 100, 100);
+                border-radius: 5px;
+             
+            }
+            &:hover .buttons{
+                display: flex;
+                            }
+                            &:hover .buttonss{
+                                display: flex;
+                                            }
+        }
+    }
+    }
+    }
+}
+
+
+
+
+@media (max-width: 430px) {
+    .Films{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        padding: 45px 0px;
+    
+        .container{
+     width: 100%;
+     height: 100%;
+    .items{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        flex-wrap: wrap;
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0px;
+            position: relative;
+            margin: 10px;
+            
+            
+            .buttons{
+                position: absolute;
+                display: none;
+                z-index: 1;
+                background-color: #00000074;
+                height: 100%;
+                width: 100%;
+               
+    
+                button{
+                    color: white;
+                    background-color: transparent;
+                    border: none;
+                    font-size: 20px;
+                    cursor: pointer;
+                    &:hover{
+                        color: #E3B517;
+                    }
+    
+                   
+                }
+            }
+            
+            .buttonss{
+                position: absolute;
+                display: none;
+                z-index: 1;
+                gap: 10px;
+               
+    
+                button{
+                    color: white;
+                    background-color: transparent;
+                    border: none;
+                    font-size: 10px;
+                    cursor: pointer;
+                    &:hover{
+                        color: #E3B517;
+                    }
+    
+                   
+                }
+            }
+            img{
+             
+                display: flex;
+                width: 70px;
+                height: 110px;
+                cursor: pointer;
+                border: 1px solid rgb(100, 100, 100);
+                border-radius: 5px;
+             
+            }
+            &:hover .buttons{
+                display: flex;
+                            }
+                            &:hover .buttonss{
+                                display: flex;
+                                            }
+        }
+    }
+    }
+    }
+}

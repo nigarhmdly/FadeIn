@@ -1,0 +1,278 @@
+
+
+  @property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+
+
+.login{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('https://img.freepik.com/free-vector/black-yellow-grunge-background_1409-1587.jpg?t=st=1739639596~exp=1739643196~hmac=f1ab5c9e6e541af8ed194099c8036597b83e30aa05ef95648b2408e8b3dd6473&w=1480');
+    .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-self: center;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(249, 249, 249, 0.221);
+        border-radius: 10px;
+        width: 350px;
+        gap: 25px;
+        padding: 20px 10px;
+
+
+        h1{
+            color: white;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+            input{
+                width: 80%;
+                color: white;
+                background-color: transparent;
+                border: 1px solid rgba(249, 249, 249, 0.221);
+                padding: 10px;
+                border-radius: 20px;
+                border: 1px solid rgba(249, 249, 249, 0.221);
+
+                &::placeholder{
+                    color: rgba(255, 255, 255, 0.789);
+                    border: none;
+                }
+                &:focus{
+                    border: none;
+                    outline:1px solid rgba(249, 249, 249, 0.221);
+ 
+
+                }
+            }
+        }
+
+
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 13px;
+            &:hover{
+                color: #e3b317;
+            }
+        }
+
+        p{
+            color: white;
+            font-size: 13px;
+            a{
+                font-weight: 700;
+            }
+        }
+        button{
+            background-color: rgb(255, 255, 255);
+            border: none;
+            width: 75%;
+            padding: 10px;
+            border-radius: 20px;
+            position: relative;
+            &:hover{
+                background-color: #e3b317;
+                color: white;
+                transition: .2s;
+            }
+        }
+    }
+
+
+
+   
+    
+    
+    
+    
+    
+            button::after , button::before{
+    
+                content: '';
+                position: absolute;
+                height: 110%;
+                width: 102%;
+                background-image: conic-gradient(from var(--angle),transparent 70%, rgb(255, 162, 0), transparent);
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
+                z-index: -1;
+                padding: 0px 0px;
+                border-radius: 22px;
+                animation: 3s spin linear infinite;
+            }
+    
+            button::before{
+                filter: blur(.5rem);
+            }
+    
+            @keyframes spin {
+                from{
+    --angle:0deg;
+                }
+                to{
+    --angle:360deg;
+                }
+                
+            }
+
+
+
+}
+
+
+@media (max-width:580px) {
+    .login{
+        height: 100vh;
+        width: 100%;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('https://img.freepik.com/free-vector/black-yellow-grunge-background_1409-1587.jpg?t=st=1739639596~exp=1739643196~hmac=f1ab5c9e6e541af8ed194099c8036597b83e30aa05ef95648b2408e8b3dd6473&w=1480');
+        .card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-self: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(249, 249, 249, 0.221);
+            border-radius: 10px;
+            width: 250px;
+            gap: 25px;
+            padding: 20px 10px;
+    
+    
+            h1{
+                color: white;
+                font-size: 22px;
+            }
+    
+            form{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                width: 100%;
+                input{
+                    width: 85%;
+                    color: white;
+                    background-color: transparent;
+                    border: 1px solid rgba(249, 249, 249, 0.221);
+                    padding: 7px;
+                    border-radius: 20px;
+                    font-size: 13px;
+                    border: 1px solid rgba(249, 249, 249, 0.221);
+    
+                    &::placeholder{
+                        color: rgba(255, 255, 255, 0.385);
+                        border: none;
+                    }
+                    &:focus{
+                        border: none;
+                        outline:1px solid rgba(249, 249, 249, 0.221);
+     
+    
+                    }
+                }
+            }
+    
+    
+            a{
+                text-decoration: none;
+                color: white;
+                font-size: 11px;
+                &:hover{
+                    color: #e3b317;
+                }
+            }
+    
+            p{
+                color: white;
+                font-size: 11px;
+                a{
+                    font-weight: 700;
+                }
+            }
+            button{
+                background-color: rgb(255, 255, 255);
+                border: none;
+                width: 75%;
+                padding: 7px;
+                border-radius: 20px;
+                font-size: 13px;
+                position: relative;
+                &:hover{
+                    background-color: #e3b317;
+                    color: white;
+                    transition: .2s;
+                }
+            }
+        }
+    
+    
+    
+       
+        
+        
+        
+        
+        
+                button::after , button::before{
+        
+                    content: '';
+                    position: absolute;
+                    height: 110%;
+                    width: 102%;
+                    background-image: conic-gradient(from var(--angle),transparent 70%, rgb(255, 162, 0), transparent);
+                    top: 50%;
+                    left: 50%;
+                    translate: -50% -50%;
+                    z-index: -1;
+                    padding: 0px 0px;
+                    border-radius: 22px;
+                    animation: 3s spin linear infinite;
+                }
+        
+                button::before{
+                    filter: blur(.5rem);
+                }
+        
+                @keyframes spin {
+                    from{
+        --angle:0deg;
+                    }
+                    to{
+        --angle:360deg;
+                    }
+                    
+                }
+    
+    
+    
+    }
+    
+}
