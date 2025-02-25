@@ -10,7 +10,6 @@ import { useDeleteBookmarkMutation, useGetBookmarkQuery } from '../../redux/slic
 
 const Bookmark = () => {
   const dispatch = useDispatch();
-  const item = useSelector((state) => state.item.item) || [];
   const nav = useNavigate();
   const bookmark = useSelector((state) => state.bookmark.userBookmark) || [];
   

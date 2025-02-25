@@ -65,7 +65,7 @@ const Watched = () => {
           setFollower(userInfo.followers || '');
 
         }
-      }, [userInfo]);
+      }, [userInfo,setName,setEmail,setImage,setBiography,setFollower]);
     
    
   

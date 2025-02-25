@@ -57,7 +57,7 @@ useEffect(() => {
         setFollower(userInfo.followers|| '');
 
       }
-    },[userInfo]);
+    },[userInfo,setName,setEmail,setImage,setBiography,setFollower]);
     const goo = (item)=>{
       nav('/detail',{state:{item}})
     }

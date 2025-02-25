@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import Header from '../../components/header/Header';
 import styles from './Followers.module.scss';
-import { useSelector } from 'react-redux';
 import { useGetUsersQuery } from '../../redux/slices/usersApiSlice';
 import { useNavigate } from 'react-router-dom';
 
 const Followers = () => {
     const { data: users, error, isLoading } = useGetUsersQuery();
-    const { userInfo } = useSelector((state) => state.auth) || [];
     const [search, setSearch] = useState("");
     const navi = useNavigate()
 

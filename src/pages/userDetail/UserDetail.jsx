@@ -42,7 +42,7 @@ const UserDetail = () => {
     if (isFollowing) return;
   
     try {
-      const response = await followUser({ userIdToFollow: item._id }).unwrap();
+     await followUser({ userIdToFollow: item._id }).unwrap();
   
       setItem((prevItem) => ({
         ...prevItem,

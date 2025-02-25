@@ -10,7 +10,7 @@ import { IoHeartDislike } from "react-icons/io5";
 
 
 const Liked = () => {
-    const [email, setEmail] = useState("");
+    const [ setEmail] = useState("");
     const [name, setName] = useState("");
     const [image, setImage] = useState("");
     const [biography, setBiography] = useState("");
@@ -23,7 +23,6 @@ const Liked = () => {
   
  
     const dispatch = useDispatch();
-    const item = useSelector((state) => state.item.item) || [];
     const nav = useNavigate();
     const like = useSelector((state) => state.like.userLike) || [];
     
@@ -67,7 +66,7 @@ const Liked = () => {
           setFollower(userInfo.followers ||'');
 
         }
-      }, [userInfo]);
+      }, [userInfo,setName,setEmail,setImage,setBiography,setFollower]);
     
    
   

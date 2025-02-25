@@ -72,7 +72,7 @@ const Login = () => {
           </button>
 
 
-<p>Don't have an accont? <a onClick={() => navigation('/register')} href="">Register</a></p>
+<p>Don't have an accont? <a onClick={() => navigation('/register')} href="/register">Register</a></p>
 
 
      </form>

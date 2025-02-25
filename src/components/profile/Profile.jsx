@@ -7,7 +7,7 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 
 
 const Profile = () => {
-    const [email, setEmail] = useState("");
+    const [ setEmail] = useState("");
     const [name, setName] = useState("");
     const [image, setImage] = useState("");
     const [biography, setBiography] = useState("");
@@ -28,7 +28,7 @@ const Profile = () => {
         setBiography(userInfo.biography);
         setFollower(userInfo.followers.length);
       }
-    }, [userInfo]);
+    }, [userInfo,setName,setEmail,setImage,setBiography,setFollower]);
   
   return (
     <div className={styles.like}>
