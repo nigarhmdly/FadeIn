@@ -16,7 +16,7 @@ const AddNew = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const activity = useSelector((state) => state.activity.userActivity) || [];
-  const item = useSelector((state) => state.item.item) || [];
+  const item = useSelector((state) => state.item.item);
 
   useEffect(() => {
     dispatch(getItemThunk());

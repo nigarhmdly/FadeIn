@@ -10,7 +10,7 @@ import { FaRegEyeSlash } from "react-icons/fa";
 
 
 const Watched = () => {
-    const [email, setEmail] = useState("");
+    const [ setEmail] = useState("");
     const [name, setName] = useState("");
     const [image, setImage] = useState("");
     const [biography, setBiography] = useState("");
@@ -22,7 +22,6 @@ const Watched = () => {
   
  
     const dispatch = useDispatch();
-    const item = useSelector((state) => state.item.item) || [];
     const nav = useNavigate();
     const watch = useSelector((state) => state.watched.userWatched) || [];
     

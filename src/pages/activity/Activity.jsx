@@ -5,18 +5,17 @@ import { useNavigate } from "react-router-dom";
 import Header from "../../components/header/Header";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { setActivity } from "../../redux/slices/activitySlice";
-import { useDeleteActivityMutation, useGetActivityQuery } from "../../redux/slices/activityApiSlice";
+import {useGetActivityQuery } from "../../redux/slices/activityApiSlice";
 
 
 const Activity = () => {
-    const [email, setEmail] = useState("");
+    const [ setEmail] = useState("");
     const [name, setName] = useState("");
     const [image, setImage] = useState("");
     const [biography, setBiography] = useState("");
       const [followers, setFollower] = useState("");
   
     const dispatch = useDispatch();
-    const item = useSelector((state) => state.item.item) || [];
     const nav = useNavigate();
     const activity = useSelector((state) => state.activity.userActivity) || [];
     
@@ -58,7 +57,7 @@ useEffect(() => {
         setFollower(userInfo.followers|| '');
 
       }
-    }, [userInfo]);
+    },[userInfo]);
     const goo = (item)=>{
       nav('/detail',{state:{item}})
     }

@@ -14,7 +14,6 @@ const Watch = () => {
 
 
   const dispatch = useDispatch();
-  const item = useSelector((state) => state.item.item) || [];
   const nav = useNavigate();
   const watch = useSelector((state) => state.watched.userWatched) || [];
   

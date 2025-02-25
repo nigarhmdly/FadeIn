@@ -11,7 +11,7 @@ const Details = () => {
   const location = useLocation();
   const { item } = location.state || {}; 
   const [body, setBody] = useState('');
-  const [search, setSearch] = useState('');  
+  const [ setSearch] = useState('');  
   const { userInfo } = useSelector((state) => state.auth) || [];
   const [ { isLoading, error, isSuccess }] = useAddCommentMutation();
   const { data: comments = [], isLoading: commentsLoading, error: commentsError } = useGetCommentsQuery(item?._id, {

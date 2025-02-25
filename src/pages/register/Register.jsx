@@ -98,7 +98,7 @@ const Register = () => {
           </button>
 
 
-<p>Do you have an account? <a  onClick={() => navigation('/login')} href="">Login</a></p>
+<p>Do you have an account? <a  onClick={() => navigation('/login')} href="/login">Login</a></p>
 
 
      </form>
