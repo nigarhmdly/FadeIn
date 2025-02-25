@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Header from "../../components/header/Header";
 import styles from "./UserDetail.module.scss";
 import { IoMdArrowRoundBack } from "react-icons/io";
-import { useFollowUserMutation, useUnfollowUserMutation } from "../../redux/slices/usersApiSlice";
+import { useFollowUserMutation} from "../../redux/slices/usersApiSlice";
 import { useSelector } from "react-redux";
 import axios from "axios";
 
@@ -12,7 +12,6 @@ const UserDetail = () => {
   const loc = useLocation();
   const { userInfo } = useSelector((state) => state.auth);
   const [followUser] = useFollowUserMutation();
-  const [unfollowUser] = useUnfollowUserMutation();
   const [isFollowing, setIsFollowing] = useState(false);
   const [item, setItem] = useState(null);
   useEffect(() => {

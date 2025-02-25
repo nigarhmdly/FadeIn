@@ -1,12 +1,9 @@
-import React, { useEffect} from 'react'
+import React from 'react'
 import styles from './Header.module.scss'
-import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { IoHomeOutline } from "react-icons/io5";
-import { MdManageSearch } from "react-icons/md";
 import { FaRegEnvelope } from "react-icons/fa";
 import { FaUsers } from "react-icons/fa";
-import { MdOutlineMessage } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { FaRegHeart } from "react-icons/fa";
 import { PiEyesBold } from "react-icons/pi";
@@ -17,8 +14,6 @@ import { PiBookmarksSimpleFill } from "react-icons/pi";
 
 const Header = () => {
 
-  const { userInfo } = useSelector((state) => state.auth);
-  const dispatch = useDispatch();
   const navigate = useNavigate();
 
     
@@ -44,15 +39,15 @@ const Header = () => {
         <li><a href="/like"><i><FaRegHeart /></i>Likes</a></li>
         <li><a href="/watch"><i><PiEyesBold /></i>Watch</a></li>
         <li><a href="/mark"><i><PiBookmarksSimpleFill /> </i>Bookmarks</a></li>
-        <li><a onClick={() => navigate('/activity')} href=""><i><CgProfile /></i>Profile</a></li>
-        <li><a className={styles.post} onClick={() => navigate('/add')} href="">Post</a></li>
+        <li><a onClick={() => navigate('/activity')} href="/activity"><i><CgProfile /></i>Profile</a></li>
+        <li><a className={styles.post} onClick={() => navigate('/add')} href="/add">Post</a></li>
 
     </ul>
 </nav>
 </div>
     </header>
     
-    <a className={styles.addicon} onClick={() => navigate('/add')}  href="">+</a>
+    <a className={styles.addicon} onClick={() => navigate('/add')}  href="/add">+</a>
 
 
 
@@ -66,7 +61,7 @@ const Header = () => {
         <li><a href="/follow"><i><FaUsers /></i></a></li>
         <li><a href="/mark"><i><PiBookmarksSimpleFill /> </i></a></li>
         <li><a href="/ss"><i><FaRegEnvelope /></i></a></li>
-        <li><a onClick={() => navigate('/activity')} href=""><i><CgProfile /></i></a></li>
+        <li><a onClick={() => navigate('/activity')} href="/activity"><i><CgProfile /></i></a></li>
 
     </ul>
 
