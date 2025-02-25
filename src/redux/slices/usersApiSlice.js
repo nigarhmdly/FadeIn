@@ -1,63 +1,71 @@
-import { apiSlice } from "./apiSlice";
-const USERS_URL = "https://backend-server.com/api/users"; // Tam URL əlavə edirik
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-export const userApiSlice = apiSlice.injectEndpoints({
+// Backend URL
+const BACKEND_URL = "https://backend-server.com/api";
+
+// apiSlice
+export const apiSlice = createApi({
+  reducerPath: "api",
+  baseQuery: fetchBaseQuery({
+    baseUrl: BACKEND_URL,
+    credentials: "include", // Cookies-in və ya JWT-nin düzgün göndərilməsi üçün
+  }),
+  tagTypes: ["User"], // Tag-lar istifadə edirik, beləliklə müəyyən müvafiq endpoints üçün invalidates edə bilərik
   endpoints: (builder) => ({
     login: builder.mutation({
       query: (data) => ({
-        url: `${USERS_URL}/auth`,
+        url: "/users/auth",
         method: "POST",
         body: data,
       }),
     }),
     logout: builder.mutation({
       query: () => ({
-        url: `${USERS_URL}/logout`,
+        url: "/users/logout",
         method: "POST",
       }),
     }),
     register: builder.mutation({
       query: (data) => ({
-        url: `${USERS_URL}/register`,
+        url: "/users/register",
         method: "POST",
         body: data,
       }),
     }),
     updateUser: builder.mutation({
       query: (data) => ({
-        url: `${USERS_URL}/profile`,
+        url: "/users/profile",
         method: "PUT",
         body: data,
       }),
     }),
     getUsers: builder.query({
       query: () => ({
-        url: `${USERS_URL}`,
+        url: "/users",
         method: "GET",
       }),
     }),
     getUser: builder.query({
       query: (id) => ({
-        url: `${USERS_URL}/${id}`,
+        url: `/users/${id}`,
         method: "GET",
       }),
     }),
     unfollowUser: builder.mutation({
       query: (userId) => ({
-        url: `${USERS_URL}/unfollow`,
+        url: "/users/unfollow",
         method: "DELETE",
         body: { userId },
       }),
       invalidatesTags: ["User"],
     }),
     followUser: builder.mutation({
-        query: ({ userIdToFollow }) => ({
-          url: `${USERS_URL}/follow`,
-          method: "POST",
-          body: { userIdToFollow: userIdToFollow.toString() }, // Stringə çeviririk
-        }),
+      query: ({ userIdToFollow }) => ({
+        url: "/users/follow",
+        method: "POST",
+        body: { userIdToFollow: userIdToFollow.toString() }, // Stringə çeviririk
       }),
-      
+    }),
   }),
 });
 
@@ -69,5 +77,5 @@ export const {
   useFollowUserMutation,
   useUnfollowUserMutation,
   useGetUsersQuery,
-  useGetUserQuery, // Burada artıq mövcuddur
-} = userApiSlice;
+  useGetUserQuery,
+} = apiSlice;
