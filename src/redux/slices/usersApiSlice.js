@@ -1,5 +1,5 @@
 import { apiSlice } from "./apiSlice";
-const USERS_URL = "/api/users";
+const USERS_URL = "https://backend-server.com/api/users"; // Tam URL əlavə edirik
 
 export const userApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
